@@ -5,19 +5,22 @@
 
 body {
     font-family: 'poppins';
-    background-color: rgb(17,17,17);
+    background-color: rgb(17, 17, 17);
 }
 
+
 /* For mobile and tab view menu */
+
 .navbar {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(37,37,37);
+    background-color: rgb(37, 37, 37);
     position: fixed;
     top: 0;
     left: -100vw;
     transition: all .5s ease-in;
 }
+
 .change {
     left: 0;
 }
@@ -32,27 +35,31 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(37,37,37);
+    background-color: rgb(37, 37, 37);
     padding: 14px 8px;
     border-radius: 5px;
     cursor: pointer;
 }
+
 .line {
     width: 63%;
     height: 2px;
-    background-color: rgb(248,245,248);
+    background-color: rgb(248, 245, 248);
     transition: all .5s ease;
 }
 
 .change .line-1 {
-    transform: rotateZ(-45deg) translate(-5px, 6px) ;
+    transform: rotateZ(-45deg) translate(-5px, 6px);
 }
+
 .change .line-2 {
     opacity: 0;
 }
+
 .change .line-3 {
     transform: rotateZ(45deg) translate(-6px, -8px);
 }
+
 
 /* menu items */
 
@@ -60,39 +67,143 @@ body {
     width: 100%;
     margin-top: 60px;
     list-style-type: none;
-    background-color: rgb(37,37,37);
+    background-color: rgb(37, 37, 37);
 }
 
 .navbar .item {
-    border-bottom: 1px solid rgba(255,248,220,0.1);
-    margin: 0 20px ;
+    border-bottom: 1px solid rgba(255, 248, 220, 0.1);
+    margin: 0 20px;
     padding: 20px 0;
 }
+
 .navbar .link {
     width: 100%;
     text-decoration: none;
     font-size: 1.4em;
     font-weight: 300;
     text-transform: uppercase;
-    color: rgb(248,245,248);
+    color: rgb(248, 245, 248);
     position: relative;
 }
+
 .link span {
     position: absolute;
     left: 38px;
     top: 0.5px;
 }
+
 .link .fas {
     font-size: .8em;
 }
+
 .item:nth-child(5) {
     border: none;
 }
+
 .fa-folder-open {
     font-size: .9em !important;
 }
 
 .link.active {
-    color: rgb(255,180,0);
+    color: rgb(255, 180, 0);
 }
 
+
+/* Mobile menu ends here */
+
+
+/* mobile homepage style starts */
+
+.main {
+    /* width: calc(100vw-20vw); */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.header {
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.name {
+    margin-bottom: 0;
+    font-size: 29px;
+    color: chocolate;
+}
+
+.designation {
+    color: #fff;
+    font-size: 25px;
+}
+
+.desc {
+    font-size: 0.9em;
+    line-height: 30px;
+    /* text-align: justify; */
+    margin: 20px 0;
+}
+
+.btn {
+    text-decoration: none;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid chocolate;
+    color: #fff;
+    text-transform: uppercase;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: relative;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.btn::before {
+    content: '';
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .3s ease-out all;
+    background-color: chocolate;
+}
+
+.btn:hover::before {
+    transform: translateX(0%);
+}
+
+.btn span {
+    font-weight: 700;
+    z-index: 3;
+    margin-right: 10px;
+}
+
+.btn .fas {
+    height: 47px;
+    width: 46px;
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: chocolate;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Index page design for mobile devices complete */
